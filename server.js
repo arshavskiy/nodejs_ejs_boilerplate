@@ -10,7 +10,8 @@ app.use(express.static('views'));
 app.set('view engine', 'ejs');
 
 app.get('/', routes.index);
-app.get('/about', routes.about);
+app.get('/Home', routes.index);
+app.get('/About', routes.about);
 
 app.listen(port, function () {
     console.log('Server listening on port ' + port + '...');
