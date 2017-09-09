@@ -4,8 +4,9 @@ var port = process.env.PORT || 3000;
 
 var app = express();
 
-// app.use('/public', express.static(process.cwd() + '/public'));
-app.use(express.static('public'));
+app.use('/public', express.static(process.cwd() + '/public'));
+app.use(express.static('views'));
+
 app.set('view engine', 'ejs');
 
 app.get('/', routes.index);
